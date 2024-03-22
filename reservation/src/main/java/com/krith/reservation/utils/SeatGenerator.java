@@ -5,7 +5,7 @@ import org.javatuples.Pair;
 import java.util.*;
 
 public class SeatGenerator {
-    static final int MAX_SEAT = 5;
+    static final int MAX_SEAT = 110;
     static final String SECTION_A = "A";
     static final String SECTION_B = "B";
 
