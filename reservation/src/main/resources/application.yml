@@ -1,0 +1,39 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:reservation
+    driver_class_name: org.h2.Driver
+    username: 'root'
+    password: 'root'
+  jpa:
+    hibernate:
+      ddl-auto: create
+  data:
+    jpa:
+      repositories:
+        enabled: true
+
+  h2:
+    console:
+      enabled: true
+  application:
+    name: TrainTicketReservation
+
+server:
+  servlet:
+    contextPath: /v1
+  error:
+    include-message: always # Used inorder to display error message in exception
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+  packagesToScan: "com.krith.reservation.controller"
+  api-docs:
+    path: /api-docs
+
+swagger:
+  info:
+    title: "Train Ticket Reservation Service"
+    description: "A simple application to reserve train ticket for the user"
+
+
